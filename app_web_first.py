@@ -1,19 +1,12 @@
-from flask import Flask 
+from flask import Flask
+import os
+
 app = Flask(__name__)
 
-@app.route('/') 
-def Home(): 
-    return """ 
-    <htlm>
-    <head>
-        <title>Flask App</title>
-    </head>
-    <body>
-        <h1>Welcome to My Flask App</h1>
-        <p>This is a simple web application built with Flask.</p>
-    </body>
-    </html>
-  """
+@app.route("/")
+def home():
+    return "<h1>Hello! My first Python website is live 🎉</h1>"
 
-if __name__ == '__main__': 
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
