@@ -4,19 +4,25 @@
 <head>
     <title>My First Website</title>
 
-    <!-- ✅ CORRECT CSS LOADING -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')🎉</h1>
+    <!-- ✅ CSS loaded correctly -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Welcome 🎉</h1>
 
         <button onclick="sayHello()">Click Me</button>
 
         <p id="message"></p>
 
         <br><br>
-        <aboutAbout</a>
+        <a href="/about">About</a>
     </div>
 
-    <!-- ✅ CORRECT JAVASCRIPT LOADING -->
-    <script src</script>
+    <!-- ✅ JavaScript loaded correctly -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
