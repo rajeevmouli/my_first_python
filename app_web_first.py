@@ -10,6 +10,10 @@ def home():
        name = request.form.get("username") 
      
     return render_template("index.html",name=name)
+    
+@app.route("/about")
+def about(): 
+    return render_template("about.html")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
