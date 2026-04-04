@@ -1,3 +1,4 @@
 function sayHello() {
-    document.getElementById("message").innerText = "Hello! JavaScript is working 😄";
+    document.getElementById("message").innerText =
+        "✅ JavaScript is working!";
 }
