@@ -1,25 +1,21 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>My First Website</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {{ url_for('static', filename='style.css') }}
 </head>
 <body>
     <h1>Welcome 🎉</h1>
-    <p>Enter your name below:</p>
 
-    <form method="POST">
-        <input type="text" name="username" placeholder="Your name" required>
-        <br><br>
-        <button type="submit">Submit</button>
-    </form>
+    <button onclick="sayHello()">Click Me</button>
+
+    <p id="message"></p>
+
     <br><br>
-     <a href="/about">About This Site</a>
+    <a href="/about">About This Site</a>
 
-
-    {% if name %}
-        <h2>Hello {{ name }}! 👋</h2>
-    {% endif %}
-
+    <!-- ✅ JavaScript file -->
+    {{ url_for('static', filename='script.js') }}
 </body>
 </html>
