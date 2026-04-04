@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "<h1>Hello! My first Python website is live 🎉</h1>"
+    return render_template("index.html")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
