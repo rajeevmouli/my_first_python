@@ -3,7 +3,9 @@
 <html>
 <head>
     <title>My First Website</title>
-    {{ url_for('static', filename='style.css') }}
+
+    <!-- ✅ CSS MUST be loaded using <link> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Welcome 🎉</h1>
@@ -15,7 +17,7 @@
     <br><br>
     <a href="/about">About This Site</a>
 
-    <!-- ✅ JavaScript file -->
-    {{ url_for('static', filename='script.js') }}
+    <!-- ✅ JavaScript MUST be loaded using <script> -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
