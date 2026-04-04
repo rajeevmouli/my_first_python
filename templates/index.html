@@ -11,13 +11,14 @@
     <h1>Welcome 🎉</h1>
 
     <button onclick="sayHello()">Click Me</button>
+    
+    <!-- ✅ JavaScript MUST be loaded using <script> -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
     <p id="message"></p>
 
     <br><br>
     <a href="/about">About This Site</a>
 
-    <!-- ✅ JavaScript MUST be loaded using <script> -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
