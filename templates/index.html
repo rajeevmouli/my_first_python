@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome 🎉</h1>
 
-    <button onclick="sayHello()">Click Me</button>
-    
-    <!-- ✅ JavaScript MUST be loaded using <script> -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div class="card">
+        <h1>Welcome 🎉</h1>
 
-    <p id="message"></p>
+        <button onclick="sayHello()">Click Me</button>
 
-    <br><br>
-    <a href="/about">About This Site</a>
+        <p id="message"></p>
+
+        <br>
+        /about
+    </div>
+
+    {{ url_for('static', filename='script.js') }}
 
 </body>
 </html>
