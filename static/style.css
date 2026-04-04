@@ -30,3 +30,20 @@ button:hover {
     background-color: #2980b9;
 }
 
+
+card {
+    background: white;
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}
+
+
