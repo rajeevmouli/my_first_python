@@ -10,16 +10,19 @@
 
 <body>
 
-    <div class="card">
-        <h1>Welcome 🎉</h1>
+   
+<h1>Welcome 🎉</h1>
 
-        <button onclick="sayHello()">Click Me</button>
+<input id="nameInput" type="text" placeholder="Enter your name">
+<br><br>
 
-        <p id="message"></p>
+<button onclick="sendName()">Submit</button>
 
-        <br><br>
-        <a href="/about">About</a>
-    </div>
+<p id="message"></p>
+
+<br>
+<a href="/about">About</a>
+
 
     <!-- ✅ JavaScript loaded correctly -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
