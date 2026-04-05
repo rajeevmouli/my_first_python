@@ -3,13 +3,17 @@ import os
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET","POST"])
+
+@app.route("/", methods=["GET"])
 def home():
-    name = None
-    if request.method == "POST":
-       name = request.form.get("username") 
-     
-    return render_template("index.html",name=name)
+    return render_template("index.html")
+
+@app.route("/hello", methods=["POST"])
+def hello():
+    data = request.get_json()
+    name = data.get("name", "Guest")
+    return jsonify({"message": f"Hello {name}! 🚀"})
+
     
 @app.route("/about")
 def about(): 
