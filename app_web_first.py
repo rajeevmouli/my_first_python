@@ -8,11 +8,15 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+
 @app.route("/hello", methods=["POST"])
 def hello():
+    print("✅ /hello endpoint hit")
     data = request.get_json()
+    print(data)
     name = data.get("name", "Guest")
     return jsonify({"message": f"Hello {name}! 🚀"})
+
 
     
 @app.route("/about")
