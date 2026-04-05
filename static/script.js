@@ -1,3 +1,6 @@
+
+alert("✅ script.js loaded");
+
 function sendName() {
     const name = document.getElementById("nameInput").value;
 
