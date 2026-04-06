@@ -1,31 +1,14 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My First Website</title>
+{% extends "base.html" %}
 
-    <!-- ✅ CSS loaded correctly -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+{% block content %}
+    <h1>Hi, I’m Mouli 👋</h1>
+    <p>I’m learning full‑stack web development using Python.</p>
 
-<body>
+    <input id="nameInput" type="text" placeholder="Enter your name">
+    <br><br>
 
-   
-<h1>Welcome 🎉</h1>
+    <button id="submitBtn">Say Hello</button>
 
-<input id="nameInput" type="text" placeholder="Enter your name">
-<br><br>
-
-<button id="submitBtn">Submit</button>
-
-<p id="message"></p>
-
-<br>
-<a href="/about">About</a>
-
-
-    <!-- ✅ JavaScript loaded correctly -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-
-</body>
-</html>
+    <p id="message"></p>
+{% endblock %}
