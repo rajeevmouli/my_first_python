@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About Me</title>
-    {{ url_for('static', filename='style.css') }}
-</head>
-<body>
-    <h1>About This Website</h1>
 
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>About Me</h1>
     <p>
-        This website is built using Python, Flask, HTML, and CSS.
+        I have a strong background in data and am now learning web development
+        to build interactive applications.
     </p>
-
-    <a href="/">⬅ Back to Home</a>
-</body>
-</html>
+{% endblock %}
